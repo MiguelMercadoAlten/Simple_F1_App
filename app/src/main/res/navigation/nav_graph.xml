@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.example.simplef1app.MainFragment"
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_MainFragment_to_DriversFragment"
+            app:destination="@id/DriversFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_CircuitsFragment"
+            app:destination="@id/CircuitsFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_ConstructorsFragment"
+            app:destination="@id/ConstructorsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DriversFragment"
+        android:name="com.example.simplef1app.drivers.DriversFragment"
+        android:label="@string/drivers_fragment_label"
+        tools:layout="@layout/fragment_drivers">
+
+        <action
+            android:id="@+id/action_DriversFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+
+        <action
+            android:id="@+id/action_DriversFragment_to_DriverDetailsFragment"
+            app:destination="@id/DriverDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DriverDetailsFragment"
+        android:name="com.example.simplef1app.drivers.DriverDetailsFragment"
+        android:label="@string/driver_details_fragment_label"
+        tools:layout="@layout/fragment_driver_details">
+
+        <action
+            android:id="@+id/action_DriverDetailsFragment_to_DriversFragment"
+            app:destination="@id/DriversFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/CircuitsFragment"
+        android:name="com.example.simplef1app.circuits.CircuitsFragment"
+        android:label="@string/circuits_fragment_label"
+        tools:layout="@layout/fragment_circuits">
+
+        <action
+            android:id="@+id/action_CircuitsFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+
+        <action
+            android:id="@+id/action_CircuitsFragment_to_CircuitDetailsFragment"
+            app:destination="@id/CircuitDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CircuitDetailsFragment"
+        android:name="com.example.simplef1app.circuits.CircuitDetailsFragment"
+        android:label="@string/circuit_details_fragment_label"
+        tools:layout="@layout/fragment_circuit_details">
+
+        <action
+            android:id="@+id/action_CircuitDetailsFragment_to_CircuitsFragment"
+            app:destination="@id/CircuitsFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/ConstructorsFragment"
+        android:name="com.example.simplef1app.constructors.ConstructorsFragment"
+        android:label="@string/constructors_fragment_label"
+        tools:layout="@layout/fragment_constructors">
+
+        <action
+            android:id="@+id/action_ConstructorsFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+
+        <action
+            android:id="@+id/action_ConstructorsFragment_to_ConstructorDetailsFragment"
+            app:destination="@id/ConstructorDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ConstructorDetailsFragment"
+        android:name="com.example.simplef1app.constructors.ConstructorDetailsFragment"
+        android:label="@string/constructor_details_fragment_label"
+        tools:layout="@layout/fragment_constructor_details">
+
+        <action
+            android:id="@+id/action_ConstructorDetailsFragment_to_ConstructorsFragment"
+            app:destination="@id/ConstructorsFragment" />
+    </fragment>
+</navigation>
